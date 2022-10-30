@@ -37,37 +37,28 @@
     <div class="back__ground1">
     </div>
     <div class="back__ground2 ">
-      <form  action="https://formspree.io/f/mvoyzeba" method="POST">
+      <form  action="https://formspree.io/f/xrgdydod" method="post">
           <div class="grid--1x6 grid--form1" id="form1">
             <div>
-            <input class="input" type="text" name="Your Name" placeholder="Name"/>
+            <input class="input" type="text"  name="Your Name" placeholder="Name" required/>
           </div>
           <div>
-            <label for="Whatsapp Number">
-            <input class="input"type="number" name="Whatsapp Number" placeholder="Whatsapp Number" minlength="11"  maxlength="25"  required/>
-          </label>
+            <input class="input" type="number" name="Whatsapp Number" id="Whatsapp Number" placeholder="Whatsapp Number"/>
           </div>
           <div>
-            <label for="Height">
-            <input class="input"type="number" name="Height" placeholder="Height (Cm)" minlength="3" maxlength="3 " required />
-          </label>
+            <input class="input" type="number" name="Height" placeholder="Height (Cm)"/>
           </div>
           <div>
-            <label for="Weight">
-            <input class="input"type="number" name="Weight" placeholder="Weight (Kg)"  minlength="2" maxlength="3 " required/>
-          </label>
+            <input class="input" type="number" name="Weight" placeholder="Weight (Kg)"/>
             </div>
             <div>
-              <label for="Age">
-              <input class="input "type="number" name="Age" placeholder="Age" minlength=“1” maxlength=“3” required/>
-            </label>
+              <input class="input"  type="number" name="Age" placeholder="Age"/>
               </div>
           <div class="wrap">
             <button type="button" value="button" class="button" id="Next1">Next</button>
           </div>
       </div>
-      
-        
+             
       <div class="grid__form2" id="form2">
         <div class="grid_question">
           <p class ="form__question">How Many Meals Do You Want In This Program ?</p>
@@ -78,6 +69,8 @@
           <label  class="lable__question" for="meal2">4</label>
           <input class="radio"type="radio" name="Meals" id="meal3" value="5"/>
           <label  class="lable__question" for="meal3">5</label>
+          <input class="radio"type="radio" name="Meals" id="meal4" value="6"/>
+          <label  class="lable__question" for="meal4">6</label>
       </div>
         </div>
 
@@ -95,24 +88,63 @@
           </div>
         </div>
 
+      
    <div class="container">
           <p class ="form__question3">Food You Dislike ?</p>
-          <textarea  placeholder="Food You Dislike" id="story" name="disliked Food"
+          <textarea  placeholder="Food You Dislike..." id="story" name="disliked Food"
             rows="5" cols="33"></textarea>
    </div>
-
         <div class="container">
-          <p class ="form__question4">Front and back and side Picture Of Yourself Clearly </p>
-        <div>
-          <p class="uploader-demo-crazy">
-          <input  type="hidden" name="my_file" id="my_file" role="uploadcare-uploader"
-           data-public-key="0d30872cfeeaf427d008"
-           data-tabs="file camera url facebook gdrive gphotos"
-             required  data-multiple/>
-        </div>
+          <p class ="form__question4">Do You Have any injury ?</p>
+          <textarea  placeholder="Do You Have any injury..." id="story" name="Do You Have any injury ?"
+          rows="5" cols="33"></textarea>
         </div>
         <div class="wrap">
-      <button type="submit" value="Submit" class="button" >submit</button>
+          <button type="button" value="button" class="button" id="Next2">Next</button>
+        </div>
+      </div>
+
+      <div class="grid__form3" id="form3">
+        <div class="grid_question3">
+          <div class="container">
+
+            <p class ="form__question4">What's Your Favorite Food ?</p>
+            <textarea class="textarea__form3" placeholder="What's Your Favorite Food... (Protein & Carb & Fats) :" id="story" name="Favorite Food"
+            rows="5" cols="33"></textarea>
+          </div>
+          
+          <div class="container">
+            <p class ="form__question4">What's Your Day Routine ?</p>
+            <textarea  class="textarea2__form3" placeholder="Do You Have any injury..." id="story" name="What's Your Day Routine..."
+            rows="5" cols="33"></textarea>
+          </div>
+          
+          <p class ="form__question plan_question">Choose Your Plan ?</p>
+      <div class = "flex__plan">
+        <label class="lable__question " for="plan1">
+          <input class=" radio radio1_question"type="radio" name="Choose Your Plan ?" id="plan1" value="350 £"/>
+          1 Month Plan 350 £E</label>
+          <label class="lable__question " for="plan2">
+            <input class=" radio radio1_question"type="radio" name="Choose Your Plan ?" id="plan2" value="950 £"/>
+            3 Months Plan 950 £E</label>
+      
+            <label class="lable__question " for="plan2">
+              <input class=" radio radio1_question"type="radio" name="Choose Your Plan ?" id="plan3" value="300 £ (Online Program)"/>
+              1 Month  Online Plan 300 £E</label>
+      </div>
+      <div class="container_form3">
+        <p class ="form__question4">Front and Back and Side Picture</p>
+      <div>
+        <p class="uploader-demo-crazy">
+        <input  type="hidden" name="my_file" id="my_file" role="uploadcare-uploader"
+         data-public-key="0d30872cfeeaf427d008"
+         data-tabs="file camera url facebook gdrive gphotos"
+           required  data-multiple/>
+      </div>
+      </div>
+        </div>
+        <div class="wrap">
+      <button type="send" value="send" class="button button__sumbit">submit</button>
         </div>
       </div>
     </form>
@@ -124,12 +156,17 @@
 
       var Next1 = document.getElementById("Next1");
       var Next2 = document.getElementById("Next2");
-      var Back1 = document.getElementById("Back1");
 
   Next1.onclick = function() {
     form1.style.left = "-450px";
     form2.style.left = "0px";
   }
+  Next2.onclick = function() {
+    form2.style.left = "-450px";
+    form3.style.left = "0px";
+  }
+  
+  
  </script>
   </body>
 </html>
