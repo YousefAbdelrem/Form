@@ -173,7 +173,7 @@ row-gap: 10px;
 }
 
 .btn__hero__callout:hover {
-  background-color: #6581e5;
+  background-color: rgb(10, 48, 88);
   color: white;
   border: none;
 }
@@ -483,10 +483,10 @@ button:focus::after {
   background-color: #3b5999;
 }
 .social-menu ul li:nth-child(2) a:hover {
-  background-color: #55acee;
+  background-color: #e04f4f;
 }
 .social-menu ul li:nth-child(3) a:hover {
-  background-color: #e4405f;
+  background-color: #0ff402;
 }
 .social-menu ul li:nth-child(4) a:hover {
   background-color: #cd201f;
@@ -554,14 +554,14 @@ input::placeholder {
 #form2 {
   position: relative;
   top: -67vh;
-  left: 450px;
+  left: 200rem;
   transition: 1s;
 }
 
 #form3 {
   position: relative;
   top: -134vh;
-  left: 450px;
+  left: 200rem;
   transition: 1s;
 }
 .form3 {
@@ -701,19 +701,13 @@ textarea::placeholder {
   }
 } 
 
-/* 
-li::before {
-  content: ">";
-  color: rgb(11, 82, 196);
-  padding-right: 0.5rem
-  
-} */
-li::marker {
+
+.Note_li::marker {
   content: "-> ";
   color: rgb(15, 19, 238);
 }
 
-li:first-child::marker {
+.Note_li:first-child::marker {
   font-size: 2.5rem;
 }
 .Note{

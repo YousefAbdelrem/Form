@@ -37,16 +37,16 @@
     <div class="back__ground1">
     </div>
     <div class="back__ground2 ">
-      <form  action="https://formspree.io/f/xjvzaqjy" method="post">
+      <form  name="myForm" action="https://formspree.io/f/xrgdydod" method="post">
           <div class="grid--1x6 grid--form1" id="form1">
             <div>
-            <input class="input" type="text"  name="Your Name" placeholder="Name" required/>
+            <input class="input" type="text"   name="Name" placeholder="Name" required/>
           </div>
           <div>
             <input class="input" type="number" name="Whatsapp Number" id="Whatsapp Number" placeholder="Whatsapp Number"/>
           </div>
           <div>
-            <input class="input" type="number" name="Height" placeholder="Height (Cm)"/>
+            <input class="input" type="number" name="Height" placeholder="Height (Cm)" />
           </div>
           <div>
             <input class="input" type="number" name="Weight" placeholder="Weight (Kg)"/>
@@ -91,7 +91,7 @@
       
    <div class="container">
           <p class ="form__question3">Food You Dislike ?</p>
-          <textarea  placeholder="Food You Dislike..." id="story" name="disliked Food"
+          <textarea  placeholder="Food You Dislike..." id="story" name="Disliked Food"
             rows="5" cols="33"></textarea>
    </div>
         <div class="container">
@@ -110,19 +110,19 @@
 
             <p class ="form__question4">What's Your Favorite Food ?</p>
             <textarea class="textarea__form3" placeholder="Favorite Food (Protein & Carb & Fats) :" id="story" name="Favorite Food"
-            rows="5" cols="33"></textarea>
+            rows="5" cols="33" required></textarea>
           </div>
           
           <div class="container">
             <p class ="form__question4">What's Your Day Routine ?</p>
             <textarea  class="textarea2__form3" placeholder="What's Your Day Routine" id="story" name="What's Your Day Routine..."
-            rows="5" cols="33"></textarea>
+            rows="5" cols="33" required></textarea>
           </div>
           <div class="grid_question">
             <p class ="form__question">Your Gender ?</p>
         <div class = "flex">
-            <input class=" radio radio1_question"type="radio" name="Gender" id="Gender" value="Male"/>
-            <label class="lable__question " for="meal1">Male</label>
+            <input class=" radio radio1_question"type="radio" name="Gender" id="Gender" value="Male" required/>
+            <label class="lable__question " for="meal1" >Male</label>
             <input class="radio"type="radio" name="Gender" id="Gender" value="Female"/>
             <label  class="lable__question" for="meal2">Female</label>
         </div>
@@ -132,17 +132,17 @@
       <div class = "flex__plan">
         <label class="lable__question " for="plan2">
           <input class=" radio radio1_question"type="radio" name="Choose Your Plan ?" id="plan3" value="350 £ (Online Program)"/>
-          1 Month  Online Plan 350 £E</label>
+          1 Month  Online Plan 350 EGP</label>
         <label class="lable__question " for="plan1">
           <input class=" radio radio1_question"type="radio" name="Choose Your Plan ?" id="plan1" value="350 £ (At GYM)"/>
-          1 Month Plan in Gym 350 £E</label>
+          1 Month Plan in Gym 350 EGP</label>
           <label class="lable__question " for="plan2">
-            <input class=" radio radio1_question"type="radio" name="Choose Your Plan ?" id="plan2" value="950 £"/>
-            3 Months Plan 950 £E</label>
+            <input class=" radio radio1_question"type="radio" name="Choose Your Plan ?" id="plan2" value="950 £" required/>
+            3 Months Plan 950 EGP</label>
       </div>
     <div> 
        <ul class="Note">
-      <li>Pay on Vodafone Cash 01271953553 </li>
+      <li class="Note_li">Pay on Orange Cash 01271953553</li>
     </ul>
   </div>
 
@@ -171,15 +171,68 @@
       var Next1 = document.getElementById("Next1");
       var Next2 = document.getElementById("Next2");
 
-  Next1.onclick = function() {
-    form1.style.left = "-450px";
-    form2.style.left = "0px";
-  }
-  Next2.onclick = function() {
-    form2.style.left = "-450px";
-    form3.style.left = "0px";
-  }
-  
+       Next1.onclick = function() {
+        let x1 = document.forms["myForm"]["Name"].value;
+        let x2 = document.forms["myForm"]["Whatsapp Number"].value;
+        let x3 = document.forms["myForm"]["Height"].value;
+        let x4 = document.forms["myForm"]["Weight"].value;
+        let x5 = document.forms["myForm"]["Age"].value;
+        if (x1 == "") 
+        {
+          alert("Name must be filled out");
+          return false;
+        }else if (x2 == ""){
+          alert("Whatsapp Number Must be Filled out");
+          return false;
+        }
+        else if (x3 == ""){
+          alert("Height Number Must be Filled out");
+          return false;
+        }
+        else if (x4 == ""){
+          alert("Weight Number Must be Filled out");
+          return false;
+        }
+        else if (x5 == ""){
+          alert("Age Number Must be Filled out");
+          return false;
+        }
+        else
+        {     
+            form1.style.left = "-200rem";
+            form2.style.left = "0px";
+        }
+      }
+
+      Next2.onclick = function() {
+        let x1 = document.forms["myForm"]["Meals"].value;
+        let x2 = document.forms["myForm"]["Gym level"].value;
+        let x3 = document.forms["myForm"]["Disliked Food"].value;
+        let x4 = document.forms["myForm"]["Do You Have any injury ?"].value;
+        if (x1 == "") 
+        {
+          alert("Meals must be filled out");
+          return false;
+        }else if (x2 == ""){
+          alert("Are You ? Must be Filled out");
+          return false;
+        }
+        else if (x3 == ""){
+          alert("Disliked Food ? Must be Filled out");
+          return false;
+        }
+        else if (x4 == ""){
+          alert("Do You Have any injury ? Must be Filled out");
+          return false;
+        }
+        else
+        {     
+            form2.style.left = "-200rem";
+            form3.style.left = "0px";
+        }
+      }
+
+     
   
  </script>
   </body>
